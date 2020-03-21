@@ -1,0 +1,9 @@
+{
+  "name": "jmw-2020-theme",
+  "version": "0.1.0",
+  "description": "A WordPress theme for jmichaelward.com",
+  "main": "index.js",
+  "repository": "https://github.com/jmichaelward/jmw-2020-theme",
+  "author": "Jeremy Ward <jeremy@jmichaelward.com>",
+  "license": "GPL-2.0-or-later"
+}
