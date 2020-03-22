@@ -1,0 +1,107 @@
+
+.pagination {
+  @extend %font-sans-alt;
+  @include clearfix;
+  padding: 4rem 0;
+  text-align: center;
+
+  a {
+    @extend %link-standard;
+  }
+
+  a:not(.prev):not(.next),
+  .page-numbers.current {
+    padding: 0 0.25rem;
+  }
+
+  li.prev,
+  li.next {
+    @include bp($bp__phone--lg) {
+      text-align: left;
+      width: 50%;
+    }
+  }
+
+  li.next {
+    @include bp($bp__phone--lg) {
+      float: left;
+      padding-right: 1rem;
+    }
+  }
+
+  li.prev {
+    @include bp($bp__phone--lg) {
+      float: right;
+      padding-left: 1rem;
+    }
+  }
+
+  li.next + li.prev {
+    margin-top: 2rem;
+
+    @include bp($bp__phone--lg) {
+      margin-top: auto;
+    }
+  }
+
+  a.prev,
+  a.next {
+    display: block;
+    width: 100%;
+
+    @include bp($bp__phone--lg) {
+      display: inline-block;
+      width: auto;
+    }
+
+    &:hover {
+      @include bp-range(0, $bp__phone--lg) {
+        border-bottom: 0 none;
+      }
+    }
+  }
+
+  a.prev:after,
+  a.next:before {
+    @include bp($bp__phone--lg) {
+      background-color: $color-border__heading;
+      content: '';
+      display: inline-block;
+      height: 2em;
+      position: relative;
+      line-height: 3;
+      vertical-align: middle;
+      width: 1px;
+    }
+
+  }
+
+  a.prev {
+    margin-bottom: 1rem;
+
+    @include bp($bp__phone--lg) {
+      margin-right: 1rem;
+    }
+
+    &:after {
+      @include bp($bp__phone--lg) {
+        right: -0.75rem;
+      }
+    }
+
+  }
+
+  a.next {
+    margin-top: 1rem;
+
+    @include bp($bp__phone--lg) {
+      margin-left: 1rem;
+    }
+
+    &:before {
+      @include bp($bp__phone--lg) {
+        left: -0.75rem;
+      }
+    }
+  }
+}
