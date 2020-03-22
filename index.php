@@ -1,12 +1,28 @@
 <?php
-get_header();
+/**
+ * Default template file.
+ *
+ * @package JMichaelWard\Theme2020
+ */
 
-while ( have_posts() ) {
-    the_post();
+use function JMichaelWard\Theme2020\includes\pagination;
 
-    the_title();
+global $wp_query;
+?>
 
-    the_content();
-}
+<?php get_header(); ?>
 
-get_footer();
+<main class="site-main">
+	<?php if ( have_posts() ) : ?>
+		<?php while ( have_posts() ) : ?>
+			<?php the_post(); ?>
+			<?php get_template_part( 'content' ); ?>
+		<?php endwhile; ?>
+
+		<?php if ( get_next_posts_link() || get_previous_posts_link() ) : ?>
+			<?php pagination( $wp_query ); ?>
+		<?php endif; ?>
+	<?php endif; ?>
+</main>
+
+<?php get_footer(); ?>
