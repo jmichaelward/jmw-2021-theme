@@ -7,9 +7,9 @@
   "author": "Jeremy Ward <jeremy@jmichaelward.com>",
   "license": "GPL-2.0-or-later",
   "scripts": {
-    "dev": "webpack --mode=development",
-    "watch": "webpack --mode=development --watch",
-    "build": "webpack --mode=production"
+    "dev": "webpack --env.mode=development",
+    "watch": "webpack --env.mode=development --watch",
+    "build": "webpack --env.mode=production"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
