@@ -1,48 +1,17 @@
 /*--------------------------------------------------------------------------------------------------------------------||
 ||  Footer                                                                                                            ||
 ||--------------------------------------------------------------------------------------------------------------------*/
-
-/*  TYPOGRAPHY: Footer
-------------------------------------------------------------*/
 .site-copyright {
-  @extend %font-sans;
-  font-size: 0.6875rem;
-  letter-spacing: 0.05em;
-}
-
-/*  DECORATION: Footer
-------------------------------------------------------------*/
-
-/*  LAYOUT: Footer
-------------------------------------------------------------*/
-.site-copyright {
-  float: right;
-  margin-bottom: 3rem;
+  text-decoration: none;
 }
 
 .site-footer {
-  background-color: $color__accent;
-  display: block;
-  padding: 3rem 0;
-  position: relative;
-  transform: rotate(-0.5deg);
-
-  &:after {
-    background-color: $color__accent;
-    bottom: -3rem;
-    display: block;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 3.5rem;
-    z-index: 20;
-  }
+  margin-top: 2rem;
 }
 
 .site-footer__inner {
   margin: 0 auto;
   max-width: $width-max--outer;
-  transform: rotate(1deg);
+  padding: 4rem 0;
   text-align: center;
-  width: 90%;
 }
