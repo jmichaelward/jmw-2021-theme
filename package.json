@@ -5,5 +5,9 @@
   "main": "index.js",
   "repository": "https://github.com/jmichaelward/jmw-2020-theme",
   "author": "Jeremy Ward <jeremy@jmichaelward.com>",
-  "license": "GPL-2.0-or-later"
+  "license": "GPL-2.0-or-later",
+  "dependencies": {
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
+  }
 }
