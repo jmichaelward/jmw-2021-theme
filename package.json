@@ -8,6 +8,7 @@
   "license": "GPL-2.0-or-later",
   "scripts": {
     "dev": "webpack --mode=development",
+    "watch": "webpack --mode=development --watch",
     "build": "webpack --mode=production"
   },
   "devDependencies": {
