@@ -1,9 +1,7 @@
 html,
 body {
-  background-color: $color__accent;
-  @extend %font-sans;
   font-size: 100%;
-  line-height: 1.4;
+  line-height: 1.6;
 
   * {
     box-sizing: border-box;
