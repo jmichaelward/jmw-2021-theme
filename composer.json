@@ -1,6 +1,7 @@
 {
     "name": "jmichaelward/jmw-2020-theme",
     "description": "A WordPress theme for jmichaelward.com.",
+    "type": "wordpress-theme",
     "authors": [
         {
             "name": "Jeremy Ward",
