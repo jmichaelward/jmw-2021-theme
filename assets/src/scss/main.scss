@@ -1,4 +1,18 @@
-body {
-  margin: 0 auto;
-  max-width: 1200px;
-}
+// Global settings and styles
+@import 'util/index';
+
+// Base styles
+@import 'base/index';
+
+// Layout
+@import 'layout/index';
+
+// Modules
+@import 'modules/index';
+
+// Templates
+@import 'templates/index';
+
+// Vendors
+@import 'vendors/index';
+

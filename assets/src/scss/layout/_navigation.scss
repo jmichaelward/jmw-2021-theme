@@ -1,0 +1,55 @@
+/*--------------------------------------------------------------------------------------------------------------------||
+||  Navigation                                                                                                        ||
+||--------------------------------------------------------------------------------------------------------------------*/
+.menu-primary-navigation-container {
+  padding-top: 0.25rem;
+  text-align: right;
+
+  @include bp($bp__tablet) {
+    visibility: visible;
+  }
+
+  .menu-item {
+    display: block;
+    margin: 0.25rem 0.75rem;
+
+    @include bp($bp__tablet) {
+      display: inline-block;
+    }
+  }
+}
+
+.menu-item {
+  a {
+    border-bottom: 1px solid transparent;
+    color: $color-white;
+    margin: 0.25rem 0;
+    padding: 0.25rem 0;
+    text-decoration: none;
+
+    &:hover {
+      border-bottom-color: $color__nav-menu-accent;
+      transition: border-bottom-width 0.25s ease-in;
+    }
+  }
+}
+
+.current-menu-item a {
+  color: $color__nav-menu-accent;
+  font-style: italic;
+
+  &:hover {
+    border-bottom-color: transparent;
+  }
+}
+
+.pagination a {
+  color: $color-text-primary;
+
+  &.next,
+  &.prev,
+  &.page-numbers {
+    color: $color-text-accent;
+    display: inline-block;
+  }
+}
