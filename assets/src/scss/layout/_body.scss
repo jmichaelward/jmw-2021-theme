@@ -2,11 +2,18 @@
 ||  Body                                                                                                              ||
 ||--------------------------------------------------------------------------------------------------------------------*/
 .site-body {
-
+  display: flex;
+  margin: 0 auto;
+  max-width: $width-max--outer;
+  width: 95%;
 }
 
 .site-main {
+  width: 75%;
+}
 
+.site-sidebar {
+  width: 25%;
 }
 
 .site-wrapper {

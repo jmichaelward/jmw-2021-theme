@@ -12,6 +12,7 @@ global $wp_query;
 
 <?php get_header(); ?>
 
+<div class="site-sidebar"></div>
 <main class="site-main">
 	<?php if ( have_posts() ) : ?>
 		<?php while ( have_posts() ) : ?>
