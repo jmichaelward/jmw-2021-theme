@@ -16,6 +16,15 @@ use WebDevStudios\OopsWP\Structure\ServiceRegistrar;
  */
 class Theme extends ServiceRegistrar {
 	/**
+	 * Theme services.
+	 *
+	 * @var array
+	 */
+	protected $services = [
+		ScriptHandler::class,
+	];
+
+	/**
 	 * Theme constructor.
 	 *
 	 * @param $file_path
