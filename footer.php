@@ -11,7 +11,7 @@
 	<div class="site-footer__inner">
 		<p class="site-footer__copyright">&copy; <?php echo esc_html( gmdate( 'Y' ) ); ?>
 			<a href="https://github.com/jmichaelward" rel="me">
-				<?php esc_html_e( 'J. Michael Ward', 'jmw-2020' ); ?>
+				<?php esc_html_e( 'J. Michael Ward', 'jmw-2020-theme' ); ?>
 			</a>
 		</p>
 	</div>
