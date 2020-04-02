@@ -11,7 +11,7 @@
     ],
     "license": "GPL-2.0-or-later",
     "require": {
-        "webdevstudios/oops-wp": "^0.3.0"
+        "jmichaelward/oops-wp-plus": "^0.1.1"
     },
     "autoload": {
         "psr-4": {
