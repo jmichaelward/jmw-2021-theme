@@ -8,6 +8,7 @@
 namespace JMichaelWard\Theme2020;
 
 use WebDevStudios\OopsWP\Structure\ServiceRegistrar;
+use \WP_Theme;
 
 /**
  * Class Theme
@@ -15,6 +16,13 @@ use WebDevStudios\OopsWP\Structure\ServiceRegistrar;
  * @TODO Flesh out the theme's service registration.
  */
 class Theme extends ServiceRegistrar {
+	/**
+	 * Theme details.
+	 *
+	 * @var string
+	 */
+	private $details;
+
 	/**
 	 * Theme services.
 	 *
@@ -27,9 +35,9 @@ class Theme extends ServiceRegistrar {
 	/**
 	 * Theme constructor.
 	 *
-	 * @param $file_path
+	 * @param WP_Theme  $details   The theme details.
 	 */
-	public function __construct( $file_path ) {
-		$this->file_path = $file_path;
+	public function __construct( WP_Theme $details ) {
+		$this->details = $details;
 	}
 }

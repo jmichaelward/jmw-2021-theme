@@ -12,7 +12,7 @@ if ( is_readable( $autoload ) ) {
 }
 
 try {
-	$theme = new Theme( __FILE__ );
+	$theme = new Theme( wp_get_theme() );
 	$theme->run();
 } catch( Error $e ) {
 	add_action( 'admin_notices', function() {
