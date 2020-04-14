@@ -6,7 +6,7 @@
  */
 
 ?>
-</div><!-- .site-body -->
+</div><!-- .site-wrapper -->
 <footer class="site-footer">
 	<div class="site-footer__inner">
 		<p class="site-footer__copyright">&copy; <?php echo esc_html( gmdate( 'Y' ) ); ?>
