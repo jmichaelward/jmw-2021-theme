@@ -1,7 +1,10 @@
 html,
 body {
   font-size: 100%;
+  font-family: $font-serif;
   line-height: 1.6;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 
   * {
     box-sizing: border-box;
