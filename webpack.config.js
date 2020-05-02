@@ -31,7 +31,9 @@ module.exports = (env) => {
         {
           test: /\.scss$/,
           use: [
-            MiniCssExtractPlugin.loader,
+            {
+              loader: MiniCssExtractPlugin.loader,
+            },
             {
               loader: 'css-loader',
               options: {
@@ -43,12 +45,24 @@ module.exports = (env) => {
             },
           ],
         },
+        {
+          test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                outputPath: 'fonts',
+                name: '[name].[ext]'
+              }
+            }
+          ]
+        },
       ],
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: 'css/[name].css',
-        chunkFileName: 'css/[id].css',
+        filename: '[name].css',
+        chunkFileName: '[id].css',
       })
     ]
   }
