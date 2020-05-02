@@ -1,0 +1,143 @@
+.site-main article + article {
+  padding-top: 4rem;
+  position: relative;
+
+  &:before {
+    border: 1px solid $color-text-primary;
+    border-radius: 50%;
+    background-color: $color-text-primary;
+    content: '';
+    display: block;
+    height: 4px;
+    margin: 0 auto 6rem auto;
+    width: 4px;
+  }
+}
+
+.entry__hdr {
+  margin-bottom: 2.4rem;
+}
+
+.entry__hd {
+  @extend %font-serif--bold;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.entry__hd a {
+  color: rgb(40, 40, 40);
+}
+
+.entry__meta {
+  @extend %font-sans;
+  letter-spacing: 0.0675rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+
+.entry__image {
+
+}
+
+.entry__link {
+
+}
+
+.entry__meta {
+
+}
+
+
+.entry__content {
+  h1, h2, h3, h4, h5, h6 {
+    color: rgb(55, 55, 55);
+    margin: 0;
+  }
+
+  h1, h2, h3 {
+    @extend %font-serif--bold;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  h3, h4 {
+    font-size: 1.75rem;
+  }
+
+  h5, h6 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.0675rem;
+  }
+
+  * + p {
+    margin-top: 1.4rem;
+  }
+
+  h2, h3, h4, h5, h6 {
+    & + p {
+      margin-top: 0.5rem;
+    }
+  }
+
+  p + *:not(p) {
+    margin-top: 2rem;
+  }
+
+  blockquote {
+    background-color: $color-white;
+    border: 0.15rem dashed $color-text-primary;
+    border-radius: 10px;
+    padding: 2rem 4rem;
+    position: relative;
+    margin-bottom: 2rem;
+
+
+    & > p {
+      font-size: 2rem;
+      font-style: italic;
+    }
+  }
+
+  i, em {
+    font-style: italic;
+  }
+
+  li {
+    margin-left: 1.125rem;
+    padding-left: 1.125rem;
+  }
+
+  ul li {
+    list-style-type: disc;
+
+    & > ul li {
+      list-style-type: square;
+
+      & > ul li {
+        list-style-type: circle;
+      }
+    }
+  }
+
+  .wp-block-code {
+    border: 1px solid rgb(180, 180, 180);
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px;
+    font-size: inherit;
+    font-family: "Ubuntu Mono", monospace;
+    overflow: auto;
+    padding: 1.75rem;
+    max-width: 100%;
+  }
+}
