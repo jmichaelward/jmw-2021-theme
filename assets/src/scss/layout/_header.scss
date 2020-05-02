@@ -2,22 +2,6 @@
 ||  Site Branding                                                                                                     ||
 ||--------------------------------------------------------------------------------------------------------------------*/
 .site-header {
-  margin-bottom: 2rem;
-  text-align: center;
+  padding: 1rem 0 1rem 2rem;
+  position: relative;
 }
-
-.site-header__branding {
-  font-size: 3rem;
-}
-
-.site-header__home-link {
-  text-decoration: none;
-}
-
-.site-header__inner {
-  margin: 0 auto;
-  max-width: $width-max--outer;
-  width: 95%;
-  padding: 2rem 0;
-}
-

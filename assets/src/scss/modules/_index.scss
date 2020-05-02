@@ -1,1 +1,8 @@
+@import 'article';
+@import 'main';
+@import 'sidebar';
 @import 'pagination';
+
+// Nav menus
+@import 'menu/primary';
+@import 'menu/external-links';

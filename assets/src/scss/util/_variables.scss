@@ -1,6 +1,6 @@
 // Page layout
 $width-max--outer: 1600px;
-$width-max--inner: 1040px;
+$width-max--inner: 1440px;
 
 // Colors
 $color__accent: rgb(170, 200, 100);
@@ -24,9 +24,10 @@ $color-text-accent: $color__accent;
 $color-text-lightest: rgb(255,255,255);
 
 // Fonts
-$font-sans: 'Lato', sans-serif;
+$font-sans: sans-serif;
 $font-sans--alt: 'Montserrat', sans-serif;
-$font-serif: 'Times New Roman', serif;
+$font-serif: 'gandhi_serifregular', serif;
+$font-serif--bold: 'gandhi_serifbold', serif;
 
 // Shadows
 $bottom-shadow: 0 2px 1px rgba(0,0,0,0.3);
