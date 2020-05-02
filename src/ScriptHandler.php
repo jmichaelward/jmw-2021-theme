@@ -18,7 +18,7 @@ class ScriptHandler extends Service {
 	/**
 	 * Constant path to the primary theme stylesheet.
 	 */
-	const THEME_CSS_PATH = '/assets/dist/css/main.css';
+	const THEME_CSS_PATH = '/assets/dist/main.css';
 
 	/**
 	 * Register the the theme script hooks.

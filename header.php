@@ -14,10 +14,9 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<header class="site-header">
-	<div class="site-header__inner">
-		<?php wp_nav_menu( [ 'menu' => 'primary-navigation' ] ); ?>
-	</div>
-</header>
-
-<div class="site-wrapper">
+	<div class="container">
+		<header class="site-header">
+			<div class="site-header__inner">
+				<?php wp_nav_menu( [ 'menu' => 'primary-navigation' ] ); ?>
+			</div>
+		</header>

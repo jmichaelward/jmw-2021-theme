@@ -30,6 +30,7 @@ class Theme extends ServiceRegistrar {
 	 */
 	protected $services = [
 		ScriptHandler::class,
+		TemplateHooks::class,
 	];
 
 	/**

@@ -14,7 +14,6 @@
 				<a class="entry__link" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 			<?php endif; ?>
 		</h1>
-
 		<?php if ( in_category( 'updates' ) ) : ?>
 			<div class="entry__meta"><?php the_time( 'F j, Y' ); ?></div>
 		<?php endif; ?>
