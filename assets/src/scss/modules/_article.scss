@@ -33,11 +33,12 @@
 .entry__hd {
   @extend %font-serif--bold;
   font-size: 1.75rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
 
   @include bp($bp__phone) {
     font-size: 3rem;
     margin-bottom: 1rem;
-    line-height: 1.2;
   }
 }
 
