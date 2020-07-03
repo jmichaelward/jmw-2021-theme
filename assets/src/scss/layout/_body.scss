@@ -6,14 +6,24 @@
   display: grid;
   gap: 0 2rem;
   grid-template-areas:
-    ". header header header header"
-    "sidebar-main content content content sidebar-supplemental"
-    "footer footer footer footer .";
-  grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows: auto;
+    "header"
+    "sidebar-main"
+    "content"
+    "sidebar-supplemental"
+    "footer";
   margin: 0 auto;
   max-width: $width-max--outer;
   width: 95%;
+
+  @include bp($bp__tablet) {
+
+    grid-template-areas:
+            ". header header header header"
+            "sidebar-main content content content sidebar-supplemental"
+            "footer footer footer footer .";
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: auto;
+  }
 }
 
 .site-header {
