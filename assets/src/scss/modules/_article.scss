@@ -15,6 +15,8 @@
 }
 
 .entry__hdr {
+  margin-bottom: 1rem;
+
   @include bp($bp__phone) {
     margin-bottom: 2.4rem;
   }
