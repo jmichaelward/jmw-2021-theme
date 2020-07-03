@@ -69,23 +69,42 @@
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+
+    @include bp($bp__phone) {
+      font-size: 2.5rem;
+    }
   }
 
   h2 {
-    font-size: 2.25rem;
+    font-size: 1.75rem;
+    line-height: 1.4;
+
+    @include bp($bp__phone) {
+      font-size: 2.25rem;
+    }
   }
 
   h3, h4 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+
+    @include bp($bp__phone) {
+      font-size: 1.75rem;
+    }
   }
 
   h5, h6 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+
+    @include bp($bp__phone) {
+      font-size: 1.5rem;
+    }
   }
 
   p {
-    font-size: 1.0675rem;
+    @include bp($bp__phone) {
+      font-size: 1.0675rem;
+    }
   }
 
   * + p {
@@ -106,14 +125,21 @@
     background-color: $color-white;
     border: 0.15rem dashed $color-text-primary;
     border-radius: 10px;
-    padding: 2rem 4rem;
+    padding: 1rem 2rem;
     position: relative;
     margin-bottom: 2rem;
 
+    @include bp($bp__phone) {
+      padding: 2rem 4rem;
+    }
 
     & > p {
-      font-size: 2rem;
       font-style: italic;
+      font-size: 1.25rem;
+
+      @include bp($bp__phone) {
+        font-size: 2rem;
+      }
     }
   }
 
