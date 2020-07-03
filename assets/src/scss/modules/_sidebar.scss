@@ -1,8 +1,8 @@
 .sidebar-container--main {
-  display: grid;
-  max-width: 100%;
+  margin-bottom: 1rem;
 
   @include bp($bp__phone) {
+    margin-bottom: auto;
     text-align: right;
   }
 }
