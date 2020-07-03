@@ -15,14 +15,20 @@
 }
 
 .entry__hdr {
-  margin-bottom: 2.4rem;
+  @include bp($bp__phone) {
+    margin-bottom: 2.4rem;
+  }
 }
 
 .entry__hd {
   @extend %font-serif--bold;
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  line-height: 1.2;
+  font-size: 1.75rem;
+
+  @include bp($bp__phone) {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
 }
 
 .entry__hd a {
