@@ -1,6 +1,10 @@
 .site-main article + article {
-  padding-top: 4rem;
+  padding-top: 1.5rem;
   position: relative;
+
+  @include bp($bp__phone) {
+    padding-top: 4rem;
+  }
 
   &:before {
     border: 1px solid $color-text-primary;
@@ -9,8 +13,12 @@
     content: '';
     display: block;
     height: 4px;
-    margin: 0 auto 6rem auto;
+    margin: 0 auto 2rem auto;
     width: 4px;
+
+    @include bp($bp__phone) {
+      margin: 0 auto 6rem auto;
+    }
   }
 }
 
