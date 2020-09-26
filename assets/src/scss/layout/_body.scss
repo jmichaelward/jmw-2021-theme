@@ -1,58 +1,90 @@
 /*--------------------------------------------------------------------------------------------------------------------||
 ||  Body                                                                                                              ||
 ||--------------------------------------------------------------------------------------------------------------------*/
-.site-container {
+.site-container,
+.site-container__inner {
   display: grid;
-  grid-template-columns: 90%;
+  gap: 0 2rem;
+  grid-template-columns: 100%;
+  justify-content: center;
+  margin: 0 auto;
+
+  @include bp($bp__tablet--sm) {
+    grid-template-columns: 200px 1fr 1fr 1fr 1fr;
+  }
+
+  @include bp($bp__tablet--lg) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    max-width: $width-max--outer;
+  }
+}
+
+.site-container {
   grid-template-areas:
     "header"
+    "container-inner"
+    "footer";
+  width: 90%;
+
+  @include bp($bp__tablet--sm) {
+    grid-template-areas:
+    ". header header header header"
+    "container-inner container-inner container-inner container-inner container-inner"
+    ". . footer footer .";
+    width: 95%;
+  }
+}
+
+.site-container__inner {
+  grid-area: container-inner;
+  grid-template-areas:
     "sidebar-main"
     "content"
-    "sidebar-supplemental"
-    "footer";
-  margin: 0 auto;
-  max-width: $width-max--outer;
-  justify-content: center;
+    "sidebar-supplemental";
+  justify-self: stretch;
+  width: 100%;
 
-  @include bp($bp__tablet) {
-    gap: 0 2rem;
+  @include bp($bp__tablet--sm) {
     grid-template-areas:
-            ". header header header header"
-            "sidebar-main content content content sidebar-supplemental"
-            "footer footer footer footer .";
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: auto;
-    width: 95%;
+      "sidebar-main content content content content";
+  }
+
+  @include bp($bp__tablet--lg) {
+    grid-template-areas:
+      "sidebar-main content content content sidebar-supplemental"
   }
 }
 
 .site-header {
   grid-area: header;
-  justify-self: stretch;
 }
 
 .site-main {
   grid-area: content;
-
-  @include bp($bp__phone) {
-    justify-self: stretch;
-    min-height: 75vh;
-    padding: 0 2rem;
-  }
+  justify-self: center;
+  width: 100%;
 }
 
 .site-footer {
   grid-area: footer;
 }
 
+.sidebar-container {
+  justify-self: stretch;
+}
+
 .sidebar-container--main {
   grid-area: sidebar-main;
-  justify-self: stretch;
 }
 
 .sidebar-container--supplemental {
   grid-area: sidebar-supplemental;
-  justify-self: stretch;
+  display: none;
+
+  @include bp($bp__tablet--lg) {
+    display: block;
+    width: 100%;
+  }
 }
 
 .hentry {

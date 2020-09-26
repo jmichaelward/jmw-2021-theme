@@ -4,12 +4,12 @@
 	</div>
 
 	<div class="sidebar__details">
-		<p>
+		<p class="sidebar-details__title">
 			<a href="<?php echo esc_url( home_url() ); ?>"
 			   title="<?php bloginfo( 'name' ); ?>">
 				<span><?php bloginfo( 'name' ); ?></span>
 			</a>
 		</p>
-		<p><?php bloginfo( 'description' ); ?></p>
+		<p class="sidebar-details__description"><?php bloginfo( 'description' ); ?></p>
 	</div>
 </aside>

@@ -36,7 +36,7 @@
 }
 
 @mixin bp($screen-size) {
-  @media (min-width: $screen-size + 'px') {
+  @media screen and (min-width: $screen-size + 'px') {
     @content;
   }
 }
