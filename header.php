@@ -14,7 +14,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-	<div class="container">
+	<div class="site-container">
 		<header class="site-header">
 			<div class="site-header__inner">
 				<?php wp_nav_menu( [ 'menu' => 'primary-navigation' ] ); ?>

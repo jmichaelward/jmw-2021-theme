@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------------------------------------------------------------||
 ||  Body                                                                                                              ||
 ||--------------------------------------------------------------------------------------------------------------------*/
-.container {
+.site-container {
   display: grid;
   grid-template-columns: 90%;
   grid-template-areas:
@@ -11,6 +11,7 @@
     "sidebar-supplemental"
     "footer";
   margin: 0 auto;
+  max-width: $width-max--outer;
   justify-content: center;
 
   @include bp($bp__tablet) {
@@ -19,9 +20,8 @@
             ". header header header header"
             "sidebar-main content content content sidebar-supplemental"
             "footer footer footer footer .";
-    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: auto;
-    justify-content: stretch;
     width: 95%;
   }
 }
