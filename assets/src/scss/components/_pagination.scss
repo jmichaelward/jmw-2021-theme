@@ -13,6 +13,11 @@
     padding: 0 0.25rem;
   }
 
+  .page-numbers.current {
+    font-weight: 700;
+    color: $color__accent;
+  }
+
   li.prev,
   li.next {
     @include bp($bp__phone--lg) {

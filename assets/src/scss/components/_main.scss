@@ -2,16 +2,22 @@
 Styles for the main element contents.
  */
 .site-main__hd,
-.page-template-default .entry__hd,
-.single .entry__hd {
+.page-template-default .entry__hd {
   @extend %font-serif--bold;
   border-bottom: 1px solid rgb(180, 180, 180);
   color: rgb(55, 55, 55);
-  font-size: 1.75rem;
-  margin-bottom: 1.25rem;
+  font-size: 1.5rem;
 
   @include bp($bp__phone) {
     font-size: 2.5rem;
     line-height: 1.2;
+  }
+}
+
+.site-main__hd {
+  margin-bottom: 1.25rem;
+
+  @include bp($bp__phone) {
+    margin-bottom: 3rem;
   }
 }

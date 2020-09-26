@@ -11,6 +11,10 @@
   }
 }
 
+.sidebar-details__title a {
+  @extend %link-standard;
+}
+
 .sidebar-details__description {
   font-size: 0.8125rem;
   line-height: 1.2;
@@ -24,6 +28,9 @@
 .sidebar__image {
   align-self: stretch;
   grid-area: profile-image;
+  border-radius: 85% 100% 0 0;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
 }
 
 .sidebar__details {

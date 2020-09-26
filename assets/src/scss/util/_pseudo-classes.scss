@@ -67,7 +67,22 @@
 }
 
 %link-standard {
+  @extend %font-sans--bold;
+  border-top: 3px dotted transparent;
+  border-bottom: 3px dotted transparent;
+  color: $color-text-primary;
+  font-size: 1rem;
+  letter-spacing: 0.03125rem;
   text-decoration: none;
+  transition: border-color 0.5s ease-out, border-radius 3s;
+
+  &:hover {
+    border-color: $color__accent;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+    border-radius: 100px;
+    transition: border-color 0.5s ease-in, border-radius 3s;
+  }
 }
 
 %transform-color-hover {

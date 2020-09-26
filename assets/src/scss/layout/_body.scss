@@ -4,7 +4,7 @@
 .site-container,
 .site-container__inner {
   display: grid;
-  gap: 0 2rem;
+  gap: 0 4rem;
   grid-template-columns: 100%;
   justify-content: center;
   margin: 0 auto;
@@ -31,7 +31,6 @@
     ". header header header header"
     "container-inner container-inner container-inner container-inner container-inner"
     ". . footer footer .";
-    width: 95%;
   }
 }
 
@@ -42,6 +41,7 @@
     "content"
     "sidebar-supplemental";
   justify-self: stretch;
+  min-height: 75vh;
   width: 100%;
 
   @include bp($bp__tablet--sm) {
