@@ -1,5 +1,9 @@
 const path = require('path');
+const browserSyncPlugin = require('browser-sync-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const uglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const optimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = (env) => {
   const {
@@ -8,12 +12,15 @@ module.exports = (env) => {
 
   return {
     mode,
+    context: __dirname,
     entry: [
       "./assets/src/js/index.js",
       "./assets/src/scss/main.scss",
     ],
     output: {
       path: path.resolve(__dirname, 'assets/dist'),
+      filename: '[name].js',
+      chunkFilename: '[chunkhash].js',
     },
     module: {
       rules: [
@@ -63,7 +70,20 @@ module.exports = (env) => {
       new MiniCssExtractPlugin({
         filename: '[name].css',
         chunkFileName: '[id].css',
-      })
-    ]
+      }),
+      new browserSyncPlugin(
+        {
+          files: "**/*.php",
+          proxy: 'https://jmw2020.localhost',
+        },
+      ),
+      new CleanWebpackPlugin(),
+    ],
+    optimization: {
+      minimizer: [
+        new uglifyJsPlugin(),
+        new optimizeCssAssetsWebpackPlugin(),
+      ]
+    }
   }
 };
