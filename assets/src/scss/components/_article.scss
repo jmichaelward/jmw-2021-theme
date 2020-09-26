@@ -181,10 +181,14 @@
     border: 1px solid rgb(180, 180, 180);
     background-color: rgb(240, 240, 240);
     border-radius: 10px;
-    font-size: inherit;
+    font-size: 0.75rem;
     font-family: "Ubuntu Mono", monospace;
     overflow: auto;
     padding: 1.75rem;
     max-width: 100%;
+
+    @include bp($bp__phone) {
+      font-size: inherit;
+    }
   }
 }
