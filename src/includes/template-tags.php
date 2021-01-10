@@ -5,7 +5,7 @@
  * @package JMichaelWard\Theme2018
  */
 
-namespace JMichaelWard\Theme2020\includes;
+namespace JMichaelWard\Theme2021\includes;
 
 use WP_Query;
 

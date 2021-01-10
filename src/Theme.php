@@ -1,11 +1,11 @@
 <?php
 /**
- * The main theme class for the 2020 theme.
+ * The main theme class for the 2021 theme.
  *
- * @package JMichaelWard\Theme2020
+ * @package JMichaelWard\Theme2021
  */
 
-namespace JMichaelWard\Theme2020;
+namespace JMichaelWard\Theme2021;
 
 use WebDevStudios\OopsWP\Structure\ServiceRegistrar;
 use \WP_Theme;

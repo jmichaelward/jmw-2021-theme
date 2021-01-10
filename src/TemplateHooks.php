@@ -3,7 +3,7 @@
  * Service for registering template hooks.
  */
 
-namespace JMichaelWard\Theme2020;
+namespace JMichaelWard\Theme2021;
 
 use WebDevStudios\OopsWP\Structure\Service;
 use WP_Query;
@@ -11,7 +11,7 @@ use WP_Query;
 /**
  * Class TemplateHooks
  *
- * @package JMichaelWard\Theme2020
+ * @package JMichaelWard\Theme2021
  */
 class TemplateHooks extends Service {
 	/**
