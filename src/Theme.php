@@ -8,6 +8,7 @@
 namespace JMichaelWard\Theme2021;
 
 use WebDevStudios\OopsWP\Structure\ServiceRegistrar;
+use WebDevStudios\OopsWP\Utility\Hookable;
 use \WP_Theme;
 
 /**
@@ -15,7 +16,7 @@ use \WP_Theme;
  *
  * @TODO Flesh out the theme's service registration.
  */
-class Theme extends ServiceRegistrar {
+class Theme extends ServiceRegistrar implements Hookable {
 	/**
 	 * Theme details.
 	 *
@@ -40,5 +41,22 @@ class Theme extends ServiceRegistrar {
 	 */
 	public function __construct( WP_Theme $details ) {
 		$this->details = $details;
+	}
+
+	/**
+	 * Run the plugin.
+	 */
+	public function run() {
+		parent::run();
+		$this->register_hooks();
+	}
+
+	/**
+	 * Register hooks with WordPRess.
+	 */
+	public function register_hooks() {
+		add_action( 'after_setup_theme', function() {
+			add_theme_support( 'post-thumbnails' );
+		} );
 	}
 }
