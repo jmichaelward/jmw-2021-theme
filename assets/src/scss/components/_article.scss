@@ -6,6 +6,10 @@
     padding-top: 4rem;
   }
 
+  @include bp($bp__tablet) {
+	padding-top: 4rem;
+  }
+
   &:before {
     border: 1px solid $color-text-primary;
     border-radius: 50%;
@@ -17,8 +21,12 @@
     width: 4px;
 
     @include bp($bp__phone) {
-      margin: 0 auto 6rem auto;
+      margin: 0 auto 4rem auto;
     }
+
+	@include bp($bp__tablet) {
+	  margin: 0 auto 4rem auto;
+	}
   }
 }
 
@@ -90,7 +98,7 @@
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
 
     @include bp($bp__tablet) {
       font-size: 2rem;
@@ -107,18 +115,18 @@
   }
 
   h3 {
-    font-size: 1.5rem;
-
-    @include bp($bp__tablet) {
-      font-size: 1.75rem;
-    }
-  }
-
-  h4, h5, h6 {
     font-size: 1.25rem;
 
     @include bp($bp__tablet) {
       font-size: 1.5rem;
+    }
+  }
+
+  h4, h5, h6 {
+    font-size: 1.125rem;
+
+    @include bp($bp__tablet) {
+      font-size: 1.375rem;
     }
   }
 
@@ -214,7 +222,8 @@
     max-width: 100%;
   }
 
-  .wp-block-code {
+  .wp-block-code,
+  p > code {
     border: 1px solid rgb(180, 180, 180);
     background-color: rgb(240, 240, 240);
     border-radius: 10px;
@@ -231,5 +240,9 @@
 
   .gist {
     margin: 1rem 0;
+  }
+
+  p > code {
+	padding: 0.25rem;
   }
 }
