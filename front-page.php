@@ -2,7 +2,7 @@
 /**
  * Front page of the site.
  *
- * @package JMichaelWard\Theme2020
+ * @package JMichaelWard\Theme2021
  */
 
 global $wp_query;
@@ -12,7 +12,7 @@ global $wp_query;
 
 <div class="site-container__inner">
 	<main class="site-main">
-		<h1 class="site-main__hd"><?php esc_html_e( 'Latest News', 'jmw-2020-theme' ); ?></h1>
+		<h1 class="site-main__hd"><?php esc_html_e( 'Latest News', 'jmw-2021-theme' ); ?></h1>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php get_template_part( 'content' ); ?>
 		<?php endwhile; ?>

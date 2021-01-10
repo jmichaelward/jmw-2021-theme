@@ -1,9 +1,9 @@
 <?php
 /**
- * Bootstrap file for the 2020 theme's functionality.
+ * Bootstrap file for the 2021 theme's functionality.
  */
 
-use JMichaelWard\Theme2020\Theme;
+use JMichaelWard\Theme2021\Theme;
 
 $autoload = __DIR__ . '/vendor/autoload.php';
 
@@ -34,14 +34,14 @@ try {
 		</div>
 		<?php
 	}
-	
+
 	$theme = new Theme( wp_get_theme() );
 	$theme->run();
 } catch( Error $e ) {
 	add_action( 'admin_notices', function() {
 		?>
 		<div class="notice notice-error">
-			<p><?php esc_html_e( 'Cannot locate PHP class files for jmw-2020-theme.', 'jmw-2020-theme' ); ?></p>
+			<p><?php esc_html_e( 'Cannot locate PHP class files for jmw-2021-theme.', 'jmw-2021-theme' ); ?></p>
 		</div>
 		<?php
 	} );

@@ -2,7 +2,7 @@
 /**
  * Default template file.
  *
- * @package JMichaelWard\Theme2020
+ * @package JMichaelWard\Theme2021
  */
 
 ?>

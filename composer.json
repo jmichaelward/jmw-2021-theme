@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "JMichaelWard\\Theme2020\\": "src/"
+            "JMichaelWard\\Theme2021\\": "src/"
         },
         "files": [
             "src/includes/template-tags.php"
