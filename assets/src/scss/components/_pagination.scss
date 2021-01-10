@@ -5,12 +5,19 @@
   padding: 4rem 0;
 
   a {
-    @extend %link-standard;
+	@extend %font-sans--bold;
+	color: $color-text-primary;
+	text-decoration: none;
+
+	&:hover {
+	  @extend %link-standard;
+	  font-family: $font-sans;
+	}
   }
 
   a:not(.prev):not(.next),
   .page-numbers.current {
-    padding: 0 0.25rem;
+	padding: 0 0.25rem;
   }
 
   .page-numbers.current {
