@@ -27,13 +27,15 @@
 
 .sidebar__image {
   align-self: stretch;
+  border-radius: 100%;
   grid-area: profile-image;
-  border-radius: 85% 100% 0 0;
   overflow: hidden;
-  margin-bottom: 0.5rem;
+  line-height: 0;
+  margin-bottom: 1rem;
 }
 
 .sidebar__details {
-  grid-area: details;
   align-self: stretch;
+  grid-area: details;
+  text-align: center;
 }
