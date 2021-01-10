@@ -74,16 +74,18 @@
 }
 
 .sidebar-container--main {
-  grid-area: sidebar-main;
+  @include bp($bp__phone--sm) {
+	grid-area: sidebar-main;
+  }
 }
 
 .sidebar-container--supplemental {
-  grid-area: sidebar-supplemental;
   display: none;
 
   @include bp($bp__tablet--lg) {
     display: block;
-    width: 100%;
+	grid-area: sidebar-supplemental;
+	width: 100%;
   }
 }
 

@@ -1,13 +1,56 @@
 .sidebar-container--main {
-  display: grid;
-  grid-template-areas:
-    "profile-image details";
-  justify-content: stretch;
-  margin-bottom: 1rem;
+  @include bp($bp__tablet--sm) {
+	display: grid;
+	grid-template-areas:
+	  "profile-image details";
+	justify-content: stretch;
+	margin-bottom: auto;
+	text-align: right;
+  }
+}
 
-  @include bp($bp__phone) {
-    margin-bottom: auto;
-    text-align: right;
+.sidebar--main {
+  align-items: center;
+  display: flex;
+  margin-bottom: 2rem;
+
+  @include bp($bp__tablet--sm) {
+	align-items: initial;
+	display: initial;
+	margin-bottom: initial;
+  }
+}
+
+.sidebar__image {
+  border-radius: 100%;
+  display: inline-block;
+  flex: 0 0 75px;
+  height: 75px;
+  line-height: 0;
+  margin-right: 1rem;
+  overflow: hidden;
+  width: 75px;
+
+  @include bp($bp__tablet--sm) {
+	align-self: center;
+	grid-area: profile-image;
+	flex: none;
+	height: auto;
+	margin: initial;
+	width: auto;
+  }
+}
+
+.sidebar__details {
+  align-self: center;
+  display: inline-flex;
+  flex-flow: column;
+
+  @include bp($bp__tablet--sm) {
+	align-self: stretch;
+	grid-area: details;
+	margin-top: 0.5rem;
+	text-align: center;
   }
 }
 
@@ -18,24 +61,9 @@
 .sidebar-details__description {
   font-size: 0.8125rem;
   line-height: 1.2;
-  margin-top: 0.5rem;
 
   @include bp($bp__tablet--sm) {
-    font-size: inherit;
+	font-size: inherit;
   }
 }
 
-.sidebar__image {
-  align-self: stretch;
-  border-radius: 100%;
-  grid-area: profile-image;
-  overflow: hidden;
-  line-height: 0;
-  margin-bottom: 1rem;
-}
-
-.sidebar__details {
-  align-self: stretch;
-  grid-area: details;
-  text-align: center;
-}
