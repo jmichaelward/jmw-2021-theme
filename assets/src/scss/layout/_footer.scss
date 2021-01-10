@@ -3,5 +3,10 @@
 ||--------------------------------------------------------------------------------------------------------------------*/
 .site-footer {
   text-align: right;
+  margin-top: 4rem;
   padding-bottom: 4rem;
+
+  @include bp($bp__tablet) {
+	margin: auto;
+  }
 }

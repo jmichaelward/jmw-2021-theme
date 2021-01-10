@@ -41,12 +41,12 @@
     "content"
     "sidebar-supplemental";
   justify-self: stretch;
-  min-height: 75vh;
   width: 100%;
 
   @include bp($bp__tablet--sm) {
     grid-template-areas:
       "sidebar-main content content content content";
+	min-height: 75vh;
   }
 
   @include bp($bp__tablet--lg) {
