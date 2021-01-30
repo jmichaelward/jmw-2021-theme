@@ -2,7 +2,7 @@
 .pagination {
   @extend %font-sans-alt;
   @include clearfix;
-  padding: 4rem 0;
+  padding-top: 2rem;
 
   a {
 	@extend %font-sans--bold;
