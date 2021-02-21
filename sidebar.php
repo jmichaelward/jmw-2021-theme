@@ -1,6 +1,6 @@
 <aside class="sidebar sidebar--main">
 	<div class="sidebar__image">
-		<?php echo get_avatar( 1, 640, false, 'J. Michael Ward' ); ?>
+		<?php echo get_avatar( 1, 320, false, 'J. Michael Ward' ); ?>
 	</div>
 
 	<div class="sidebar__details">
