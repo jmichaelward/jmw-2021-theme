@@ -5,8 +5,8 @@
          url('GandhiSerif-Regular-webfont.woff') format('woff'),
          url('GandhiSerif-Regular-webfont.ttf') format('truetype'),
          url('GandhiSerif-Regular-webfont.svg#gandhi_serifregular') format('svg');
+	font-display: swap;
     font-weight: normal;
     font-style: normal;
-
 }
 
