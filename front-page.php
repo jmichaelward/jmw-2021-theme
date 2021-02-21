@@ -5,6 +5,8 @@
  * @package JMichaelWard\Theme2021
  */
 
+use function JMichaelWard\Theme2021\includes\pagination;
+
 global $wp_query;
 ?>
 
