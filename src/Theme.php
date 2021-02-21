@@ -16,7 +16,7 @@ use \WP_Theme;
  *
  * @TODO Flesh out the theme's service registration.
  */
-class Theme extends ServiceRegistrar implements Hookable {
+class Theme extends ServiceRegistrar {
 	/**
 	 * Theme details.
 	 *
@@ -30,6 +30,7 @@ class Theme extends ServiceRegistrar implements Hookable {
 	 * @var array
 	 */
 	protected $services = [
+		SupportHandler::class,
 		ScriptHandler::class,
 		TemplateHooks::class,
 	];
@@ -41,23 +42,5 @@ class Theme extends ServiceRegistrar implements Hookable {
 	 */
 	public function __construct( WP_Theme $details ) {
 		$this->details = $details;
-	}
-
-	/**
-	 * Run the plugin.
-	 */
-	public function run() {
-		parent::run();
-		$this->register_hooks();
-	}
-
-	/**
-	 * Register hooks with WordPRess.
-	 */
-	public function register_hooks() {
-		add_action( 'after_setup_theme', function() {
-			add_theme_support( 'title-tag' );
-			add_theme_support( 'post-thumbnails' );
-		} );
 	}
 }
