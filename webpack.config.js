@@ -18,6 +18,7 @@ module.exports = (env) => {
       "./assets/src/scss/main.scss",
     ],
     output: {
+      publicPath: '',
       path: path.resolve(__dirname, 'assets/dist'),
       filename: '[name].js',
       chunkFilename: '[chunkhash].js',
