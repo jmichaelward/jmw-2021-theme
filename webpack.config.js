@@ -70,7 +70,7 @@ module.exports = (env) => {
     plugins: [
       new MiniCssExtractPlugin({
         filename: '[name].css',
-        chunkFileName: '[id].css',
+        chunkFilename: '[id].css',
       }),
       new browserSyncPlugin(
         {
