@@ -4,17 +4,13 @@
  *
  * @package JMichaelWard\Theme2021
  */
-
 ?>
 
 <?php get_header(); ?>
 
 <div class="site-container__inner">
 	<main class="site-main">
-		<?php while ( have_posts() ) : ?>
-			<?php the_post(); ?>
-			<?php get_template_part( 'content' ); ?>
-		<?php endwhile; ?>
+		<?php do_action( 'JMichaelWard\Theme2021\post_content_loop' ); ?>
 	</main>
 
 	<div class="sidebar-container sidebar-container--main">

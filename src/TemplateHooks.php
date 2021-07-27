@@ -15,10 +15,16 @@ use WP_Query;
  */
 class TemplateHooks extends Service {
 	/**
+	 * Name of the post content loop action.
+	 */
+	const ACTION_POST_CONTENT_LOOP = __NAMESPACE__ . '\post_content_loop';
+
+	/**
 	 * Register service with WordPress.
 	 */
 	public function register_hooks() {
 		// add_filter( 'pre_get_posts', [ $this, 'filter_front_page_loop' ] );
+		add_action( self::ACTION_POST_CONTENT_LOOP, [ $this, 'post_content_loop_callback' ] );
 	}
 
 	/**
@@ -34,5 +40,20 @@ class TemplateHooks extends Service {
 		}
 
 		return $query;
+	}
+
+	/**
+	 * This callback action handles outputting post content loop markup to the theme.
+	 */
+	public function post_content_loop_callback() {
+		if ( is_404() ) {
+			get_template_part( 'partials/content', '404' );
+			return;
+		}
+
+		while ( have_posts() ) {
+			the_post();
+			get_template_part( 'content' );
+		}
 	}
 }
